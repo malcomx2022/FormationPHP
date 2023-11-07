@@ -7,7 +7,7 @@
 
 <body>
 
-    <form>
+    <form method="POST" action="traitement.php" enctype="multipart/form-data">
 
         <p>
             <label for="nom1">
@@ -37,7 +37,7 @@
         <textarea name="grand-texte" rows="10" cols="100"> Entrer votre texte </textarea>
 
         <p>
-            # selecteur
+            <!--selecteur-->
 
             <select name="pays">
                 <option value="France">France</option>
@@ -46,7 +46,7 @@
                 <option value="Luxembourg">Luxembourg</option>
             </select>
         </p>
-        # checkbox
+        <!--checkbox-->
         <p>
             <input type="checkbox" id="php" name="formation" value="php" checked />
             <label for="php">Formation php</label>
@@ -62,7 +62,7 @@
             <input type="checkbox" id="css" name="formation" value="css" />
             <label for="css">Formation css</label>
         </p>
-        # radio
+        <!--radio-->
         <p>
             Choisisez votre sexe
         </p>
@@ -76,13 +76,16 @@
             <label for="femme">Femme</label>
         </p>
 
-        # file
+        <!--file-->
         <p>
-            <input type="hidden" name="MAX_FILE_SIZE" value="1000" />
+            <input type="hidden" name="MAX_FILE_SIZE" value="100000000" />
         </p>
         <p>
-            <input type="file" size="1000" name="document" accept="application/msexcel,application/msword,application/pdf,image/gif,image/jpeg" />
-
+            <input type="file" name="document" />
+        </p>
+        <p>
+            <input type="submit" value="Envoyer" />
+            <input type="reset" value="Effacer" />
         </p>
     </form>
 
